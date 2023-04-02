@@ -1,0 +1,23 @@
+import java.util.*;
+public class MissingNum2 {
+    public static void main(String[] args) {
+        int[] arr = {-2,0,1,2,5,4};
+        Arrays.sort(arr);
+        ArrayList<Integer> list = new ArrayList<>();
+        for(int i : arr)
+        {
+            list.add(i);
+           
+        }
+        int min = Collections.min(list);
+        int max= Collections.max(list);
+        System.out.println("Missing number in arr: ");
+        for(int i=min;i<=max;i++)
+        {
+            if(!list.contains(i))
+            {
+                System.out.print(i+" ");
+                }
+            }
+        }
+    }
